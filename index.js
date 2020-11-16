@@ -19,8 +19,8 @@ const randomIntegerFromInterval = (min, max) => {
 startBtn.addEventListener(`click`, startColorSwitch);
 
 function startColorSwitch() {
+  startBtn.disabled = true;
   intervalId = setInterval(() => {
-    startBtn.disabled = true;
     body.style.background =
       colors[randomIntegerFromInterval(0, colors.length - 1)];
   }, 1000);
